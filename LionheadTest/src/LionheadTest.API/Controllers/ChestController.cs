@@ -2,6 +2,7 @@
 using System.Web.Http;
 using LionheadTest.API.ViewModel;
 using LionheadTest.Domain;
+using LionheadTest.Domain.Logging;
 
 namespace LionheadTest.API.Controllers
 {
@@ -9,15 +10,17 @@ namespace LionheadTest.API.Controllers
     public class ChestController : ApiController
     {
         private readonly ILootTable _lootTable;
+        private readonly ILogger _logger;
 
-        public ChestController(ILootTable lootTable)
+        public ChestController(ILootTable lootTable, ILogger logger)
         {
             _lootTable = lootTable;
+            _logger = logger;
         }
 
         [Route("{chestIdentifier}")]
         [HttpGet]
-        public ChestItemViewModel Get(Guid chestIdentifier)
+        public ChestItemViewModel Get(string playerName, Guid chestIdentifier)
         {
             // I want to return an item with a deterministic id from the chest
             // so that each player gets the same item, and a returning player
@@ -26,8 +29,13 @@ namespace LionheadTest.API.Controllers
 
             var chestHashCode = chestIdentifier.GetHashCode();
             var lootItem = _lootTable.Roll(chestHashCode);
-            return new ChestItemViewModel(
+            var vm = new ChestItemViewModel(
                 string.Concat(chestHashCode, lootItem.Identifier), lootItem.Name);
+
+            _logger.Log(string.Format(
+                "Player: {0}, Received: {1} {2}", playerName, vm.Identifier, vm.Name));
+
+            return vm;
         }
     }
 }
