@@ -1,5 +1,8 @@
-﻿namespace LionheadTest.Domain.Model
+﻿using System;
+
+namespace LionheadTest.Domain.Model
 {
+    [Serializable]
     public class LootItem
     {
         public readonly string Identifier;

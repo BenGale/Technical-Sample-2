@@ -1,4 +1,8 @@
 ﻿using System.Web.Http;
+using LionheadTest.API.IoC;
+using Ninject;
+using Ninject.Web.Common.OwinHost;
+using Ninject.Web.WebApi.OwinHost;
 using Owin;
 
 namespace LionheadTest.API
@@ -10,7 +14,11 @@ namespace LionheadTest.API
             var configuration = new HttpConfiguration();
             configuration.MapHttpAttributeRoutes();
 
-            appBuilder.UseWebApi(configuration);
+            var kernel = new StandardKernel(
+                new ConfigurationModule());
+
+            appBuilder.UseNinjectMiddleware(() => kernel);
+            appBuilder.UseNinjectWebApi(configuration);
         }
     }
 }

@@ -11,7 +11,14 @@ namespace LionheadTest.Config.InMemory
 
         public InMemoryConfiguration()
         {
-            _lootConfiguration = new List<LootItemWeighting>();
+            _lootConfiguration = new List<LootItemWeighting>
+            {
+                new LootItemWeighting(new LootItem("1", "Sword"), 10),
+                new LootItemWeighting(new LootItem("2", "Shield"), 10),
+                new LootItemWeighting(new LootItem("3", "Health Potion"), 30),
+                new LootItemWeighting(new LootItem("4", "Resurrection Phial"), 30),
+                new LootItemWeighting(new LootItem("5", "Scroll of Wisdom"), 20)
+            };
         }
 
         public void AddItem(LootItem item, int dropWeight)

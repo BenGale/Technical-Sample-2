@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using LionheadTest.Domain.Configuration;
 using LionheadTest.Domain.Model;
@@ -17,9 +18,9 @@ namespace LionheadTest.API.Controllers
 
         [Route("")]
         [HttpGet]
-        public IReadOnlyList<LootItemWeighting> Get()
+        public LootItemWeighting[] Get()
         {
-            return _lootTableConfig.GetWeightings();
+            return _lootTableConfig.GetWeightings().ToArray();
         }
 
         [Route("")]
