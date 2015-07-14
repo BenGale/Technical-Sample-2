@@ -12,7 +12,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FB8F39
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.Host", "LionheadTest.Host\LionheadTest.Host.csproj", "{F20700BD-8664-44CE-A0AE-ACC6DF2EF38F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.Domain", "src\LionheadTest.Domain\LionheadTest.Domain.csproj", "{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2A939F68-9DB2-46DF-9319-C9B8607D4295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.DomainUnitTests", "test\LionheadTest.DomainUnitTests\LionheadTest.DomainUnitTests.csproj", "{AB3537CA-3450-4BF8-B705-883C6A6B8D35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.Host", "src\LionheadTest.Host\LionheadTest.Host.csproj", "{F20700BD-8664-44CE-A0AE-ACC6DF2EF38F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +42,26 @@ Global
 		{EF02C158-DC6F-430F-87EF-7CF85F7C7F17}.Release|ARM.ActiveCfg = Release|Any CPU
 		{EF02C158-DC6F-430F-87EF-7CF85F7C7F17}.Release|x64.ActiveCfg = Release|Any CPU
 		{EF02C158-DC6F-430F-87EF-7CF85F7C7F17}.Release|x86.ActiveCfg = Release|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Release|ARM.ActiveCfg = Release|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Release|x64.ActiveCfg = Release|Any CPU
+		{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Release|ARM.ActiveCfg = Release|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Release|x64.ActiveCfg = Release|Any CPU
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35}.Release|x86.ActiveCfg = Release|Any CPU
 		{F20700BD-8664-44CE-A0AE-ACC6DF2EF38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F20700BD-8664-44CE-A0AE-ACC6DF2EF38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F20700BD-8664-44CE-A0AE-ACC6DF2EF38F}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -49,5 +75,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB3537CA-3450-4BF8-B705-883C6A6B8D35} = {2A939F68-9DB2-46DF-9319-C9B8607D4295}
 	EndGlobalSection
 EndGlobal
