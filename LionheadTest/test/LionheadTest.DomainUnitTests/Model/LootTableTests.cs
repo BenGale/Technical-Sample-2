@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using FluentAssertions;
 using LionheadTest.Domain.Configuration;
 using LionheadTest.Domain.Model;
 using Moq;
@@ -33,6 +35,18 @@ namespace LionheadTest.DomainUnitTests.Model
         public void OnCreationLootTableLoadsItemsFromConfig()
         {
             _configurationMock.Verify(m => m.GetWeightings(), Times.Once);
+        }
+
+        [Test]
+        public void WithSeed_RollIsIdempotent()
+        {
+            var randomSeed = new Random().Next();
+            var firstItem = _sut.Roll(randomSeed);
+            for (var i = 0; i < 100; i++)
+            {
+                var nextItem = _sut.Roll(randomSeed);
+                firstItem.Should().Be(nextItem);
+            }
         }
     }
 }
