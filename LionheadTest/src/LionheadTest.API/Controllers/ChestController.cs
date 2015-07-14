@@ -18,7 +18,7 @@ namespace LionheadTest.API.Controllers
             _logger = logger;
         }
 
-        [Route("{chestIdentifier}")]
+        [Route("{chestIdentifier}/{playerName}")]
         [HttpGet]
         public ChestItemViewModel Get(string playerName, Guid chestIdentifier)
         {

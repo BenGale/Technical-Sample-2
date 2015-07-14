@@ -1,6 +1,9 @@
-﻿using LionheadTest.Config.InMemory;
+﻿using System.Diagnostics;
+using LionheadTest.API.Logging;
+using LionheadTest.Config.InMemory;
 using LionheadTest.Domain;
 using LionheadTest.Domain.Configuration;
+using LionheadTest.Domain.Logging;
 using Ninject.Modules;
 
 namespace LionheadTest.API.IoC
@@ -10,6 +13,7 @@ namespace LionheadTest.API.IoC
         public override void Load()
         {
             Bind<ILootTableConfig>().To<InMemoryConfiguration>().InSingletonScope();
+            Bind<ILogger>().To<TraceLogger>();
             Bind<ILootTable>().To<LootTable>();
         }
     }
