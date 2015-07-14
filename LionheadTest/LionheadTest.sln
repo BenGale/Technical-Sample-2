@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.Config.InMemor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionheadTest.APIUnitTests", "test\LionheadTest.APIUnitTests\LionheadTest.APIUnitTests.csproj", "{229F2176-F2E1-4AEB-B426-50CA9948A78B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionHeadTest.Config.InMemoryUnitTests", "LionHeadTest.Config.InMemoryUnitTests\LionHeadTest.Config.InMemoryUnitTests.csproj", "{C48D0399-4679-453E-AC16-F0D863D568F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LionHeadTest.Config.InMemoryUnitTests", "test\LionHeadTest.Config.InMemoryUnitTests\LionHeadTest.Config.InMemoryUnitTests.csproj", "{C48D0399-4679-453E-AC16-F0D863D568F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

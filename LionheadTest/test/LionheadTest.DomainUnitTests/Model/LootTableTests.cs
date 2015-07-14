@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FluentAssertions;
+using LionheadTest.Domain;
 using LionheadTest.Domain.Configuration;
 using LionheadTest.Domain.Model;
 using Moq;

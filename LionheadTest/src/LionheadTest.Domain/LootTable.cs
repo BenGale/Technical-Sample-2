@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using LionheadTest.Domain.Configuration;
+using LionheadTest.Domain.Model;
 
-namespace LionheadTest.Domain.Model
+namespace LionheadTest.Domain
 {
-    public class LootTable
+    public class LootTable : ILootTable
     {
         private readonly ILootTableConfig _configProvider;
         private int _weightingTotal;

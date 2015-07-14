@@ -15,7 +15,7 @@ namespace LionheadTest.API
             configuration.MapHttpAttributeRoutes();
 
             var kernel = new StandardKernel(
-                new ConfigurationModule());
+                new DomainModule());
 
             appBuilder.UseNinjectMiddleware(() => kernel);
             appBuilder.UseNinjectWebApi(configuration);

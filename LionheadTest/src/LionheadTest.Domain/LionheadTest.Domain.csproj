@@ -41,8 +41,9 @@
   <ItemGroup>
     <Compile Include="Configuration\ILootTableConfig.cs" />
     <Compile Include="Configuration\LootItemWeighting.cs" />
+    <Compile Include="ILootTable.cs" />
     <Compile Include="Model\LootItem.cs" />
-    <Compile Include="Model\LootTable.cs" />
+    <Compile Include="LootTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

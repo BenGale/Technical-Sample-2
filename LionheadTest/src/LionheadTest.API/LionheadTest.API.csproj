@@ -117,11 +117,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ChestController.cs" />
     <Compile Include="Controllers\ConfigurationController.cs" />
-    <Compile Include="Controllers\HelloWorldController.cs" />
-    <Compile Include="IoC\ConfigurationModule.cs" />
+    <Compile Include="IoC\DomainModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\ChestItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LionheadTest.Config.InMemory\LionheadTest.Config.InMemory.csproj">

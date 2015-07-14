@@ -60,11 +60,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\LionheadTest.Config.InMemory\LionheadTest.Config.InMemory.csproj">
+    <ProjectReference Include="..\..\src\LionheadTest.Config.InMemory\LionheadTest.Config.InMemory.csproj">
       <Project>{56C01C66-31C1-4A4D-9592-E2C82598986A}</Project>
       <Name>LionheadTest.Config.InMemory</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\LionheadTest.Domain\LionheadTest.Domain.csproj">
+    <ProjectReference Include="..\..\src\LionheadTest.Domain\LionheadTest.Domain.csproj">
       <Project>{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}</Project>
       <Name>LionheadTest.Domain</Name>
     </ProjectReference>
