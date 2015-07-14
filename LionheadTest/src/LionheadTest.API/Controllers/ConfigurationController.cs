@@ -22,11 +22,19 @@ namespace LionheadTest.API.Controllers
             return _lootTableConfig.GetWeightings();
         }
 
-        [Route("add")]
+        [Route("")]
         [HttpPost]
         public IHttpActionResult Post(LootItem lootItem, int dropWeighting)
         {
             _lootTableConfig.AddItem(lootItem, dropWeighting);
+            return Ok();
+        }
+
+        [Route("{itemIdentifier}")]
+        [HttpDelete]
+        public IHttpActionResult Delete(string itemIdentifier)
+        {
+           _lootTableConfig.RemoveItem(itemIdentifier);
             return Ok();
         }
     }

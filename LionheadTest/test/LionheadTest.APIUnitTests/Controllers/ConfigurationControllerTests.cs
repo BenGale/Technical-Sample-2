@@ -44,8 +44,18 @@ namespace LionheadTest.APIUnitTests.Controllers
         [Test]
         public void Post_AddsNewItem()
         {
-            var result = _sut.Post(new LootItem("6", "Funny Hat"), 50);
+            var newItem = new LootItem("6", "Funny Hat");
+            var result = _sut.Post(newItem, 50);
             result.Should().BeOfType<OkResult>();
+            _configurationMock.Verify(m => m.AddItem(newItem, 50), Times.Once);
+        }
+
+        [Test]
+        public void Delete_RemovesItem()
+        {
+            var result = _sut.Delete("5");
+            result.Should().BeOfType<OkResult>();
+            _configurationMock.Verify(m => m.RemoveItem("5"), Times.Once);
         }
     }
 }
