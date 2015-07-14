@@ -32,8 +32,9 @@ namespace LionheadTest.DomainUnitTests.Model
         }
 
         [Test]
-        public void OnCreationLootTableLoadsItemsFromConfig()
+        public void OnRoll_LootTableLoadsItemsFromConfig()
         {
+            _sut.Roll(10);
             _configurationMock.Verify(m => m.GetWeightings(), Times.Once);
         }
 

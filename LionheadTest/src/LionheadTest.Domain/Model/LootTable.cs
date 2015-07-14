@@ -7,16 +7,19 @@ namespace LionheadTest.Domain.Model
 {
     public class LootTable
     {
+        private readonly ILootTableConfigProvider _configProvider;
         private int _weightingTotal;
-        private readonly IReadOnlyList<LootWeightRange> _lootItems;
+        private IReadOnlyList<LootWeightRange> _lootItems;
 
         public LootTable(ILootTableConfigProvider configProvider)
         {
-            _lootItems = CreateWeightedRanges(configProvider.GetWeightings());
+            _configProvider = configProvider;
         }
 
         public LootItem Roll(int seed)
         {
+            _lootItems = CreateWeightedRanges(_configProvider.GetWeightings());
+
             var roll = new Random(seed).Next(0, _weightingTotal);
 
             return _lootItems
