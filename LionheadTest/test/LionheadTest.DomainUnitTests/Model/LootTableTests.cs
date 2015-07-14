@@ -12,12 +12,12 @@ namespace LionheadTest.DomainUnitTests.Model
     public class LootTableTests
     {
         private LootTable _sut;
-        private Mock<ILootTableConfigProvider> _configurationMock;
+        private Mock<ILootTableConfig> _configurationMock;
 
         [SetUp]
         public void Setup()
         {
-            _configurationMock = new Mock<ILootTableConfigProvider>();
+            _configurationMock = new Mock<ILootTableConfig>();
             _configurationMock.Setup(m => m.GetWeightings())
                 .Returns(new List<LootItemWeighting>
                 {

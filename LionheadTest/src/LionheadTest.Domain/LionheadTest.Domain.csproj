@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\ILootTableConfigProvider.cs" />
+    <Compile Include="Configuration\ILootTableConfig.cs" />
     <Compile Include="Configuration\LootItemWeighting.cs" />
     <Compile Include="Model\LootItem.cs" />
     <Compile Include="Model\LootTable.cs" />

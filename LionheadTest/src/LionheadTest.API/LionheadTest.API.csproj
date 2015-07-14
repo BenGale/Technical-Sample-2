@@ -93,9 +93,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LionheadTest.Domain\LionheadTest.Domain.csproj">
+      <Project>{C6E31629-1EA6-41AD-B3B5-2EB4F810F914}</Project>
+      <Name>LionheadTest.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

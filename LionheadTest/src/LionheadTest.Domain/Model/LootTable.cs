@@ -7,11 +7,11 @@ namespace LionheadTest.Domain.Model
 {
     public class LootTable
     {
-        private readonly ILootTableConfigProvider _configProvider;
+        private readonly ILootTableConfig _configProvider;
         private int _weightingTotal;
         private IReadOnlyList<LootWeightRange> _lootItems;
 
-        public LootTable(ILootTableConfigProvider configProvider)
+        public LootTable(ILootTableConfig configProvider)
         {
             _configProvider = configProvider;
         }
