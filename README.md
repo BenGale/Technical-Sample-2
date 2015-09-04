@@ -1,4 +1,4 @@
-# Lionhead Test
+# Technical Test
 
 ## Chest Request
 
